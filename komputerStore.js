@@ -2,12 +2,17 @@
 const getALoanBtnElement = document.getElementById("getALoanBtn");
 const getBankBtnElement = document.getElementById("bankBtn");
 const getWorkBtnElement = document.getElementById("workBtn");
+const getBuyNowBtnElement = document.getElementById("buyNowBtn");
+
 //Get variables
 const getBankBalanceElement = document.getElementById("bankBalance");
 const getOutstandingLoanElement = document.getElementById("outstandingLoanValue");
 const getPayBalanceElement = document.getElementById("payBalance");
 const getFeaturesElement = document.getElementById("featuresTitle");
-const getComputerSpecs = document.getElementById("computerSpecs");
+const getComputerSpecsElement = document.getElementById("computerSpecs");
+const getLaptopNameElement = document.getElementById("laptopName");
+const getComputerDescriptionElement = document.getElementById("computerDescription");
+const getComputerPriceElement = document.getElementById("computerPrice");
 //Select
 const getComputersSelectElement = document.getElementById("computers");
 
