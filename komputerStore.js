@@ -32,41 +32,32 @@ let totalLoan = 0;
 
 ////////////////////////////////BANK
  const getLoan = () => {
+    //const bankBalance = parseInt(bankBalanceElement.value);
+    //const outstandingLoan = parseInt(outstandingLoanElement.value);
 
-    console.log("hello");
-    const bankBalance = parseInt(bankBalanceElement.value);
-    const outstandingLoan = parseInt(outstandingLoanElement.value);
-
-    if(totalLoan > 0) {
-        alert (`Your total loan is ${totalLoan} \n\n Press Word to\n Repay loan`);
-        outstandingLoan.innerText =  `Outstanding loan: ${totalLoan}`;
-    
-    } else if(totalLoan > bankBalance * 2) {
-        totalLoan = Number(window.prompt("--Your loan cannot be more than double your balance--\n Enter an amount: ", ""));
-        outstandingLoan.innerText = `Outstanding loan: ${totalLoan}`;
-    }
-    else {
+    /*
+    if (totalLoan == 0) {
         totalLoan = Number(window.prompt("Enter an amount: "));
         alert("Loan accomplished!!💸");
         outstandingLoanElement.innerText = `Your loan is: ${totalLoan}`;
-        // outstandingLoan.innerText = `Outstanding loan: ${enterAmount.innerText}`;
+    } else if (totalLoan <= bankBalance * 2) {
+        alert ("--Your loan cannot be more than double your balance--\n");
     }
+    else {
+        alert (`Your total loan is ${totalLoan}\n\nPress Work \nto\nRepay loan`);
+    }
+    */
+    const prompt = Number(window.prompt('Enter an amount to loan: '));
 
-//     //If you have 1 loan already
-//     if (outstandingLoan > 0) {
-//         alert("Your total loan is" + outstandingLoan + ".\n\n Press Work to \n Repay loan");
-//         outstandingLoanElement.innerText = "Outstanding loan: " + enterAmount;
-//     } else {
-//         enterAmount = Number(window.prompt("Enter an amount: "))
-    
-//         if (enterAmount > bankBalance * 2 ) {
-//             enterAmount = Number(window.prompt("--Your loan cannot be more than double your balance--\n Enter an amount: ", ""));
-//             outstandingLoanElement.innerText = "Outstanding loan: " + enterAmount;
-//         } else {
-//             alert ("Your total loan now is: " + enterAmount);
-//             outstandingLoan+=1;
-//             outstandingLoanElement.innerText = "Outstanding loan: " + enterAmount;
-//         }
+    if (prompt > bankBalance * 2){
+        alert('Your loan cannot be more than double you bank balance.');
+    } else if(prompt > 0){
+        alert(`You've already taken a loan`);
+    } else {
+        bankBalance = bankBalance + prompt;
+        outstandingLoanElement.innerText =  `Total loan: ${bankBalance} SEK`;
+        //bankBalanceElement.innerText = bankBalance + ' kr';
+    }
 }
 
 ////////////////////////////////WORK
@@ -75,9 +66,7 @@ const transferMoney = () => {
 }
 
 const increasePayBalance = () => {
-    const payBalance = parseInt(payBalanceElement.value);
-    payBalance +=100;
-    payBalanceElement.innerText = `${payBalance}`;
+
 }
 
 const repayLoan = () => {
@@ -92,7 +81,7 @@ fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
     .then(computers => addComputersToMenu(computers));
 
 const addComputersToMenu = (computers) => {
-    
+
     computers.forEach(x => addComputerToMenu(x));
     computerPriceElement.innerText = computers[0].price;
     computerSpecsElement.innerText = computers[0].specs;
