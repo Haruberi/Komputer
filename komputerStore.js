@@ -32,6 +32,7 @@ let totalLoan = 0;
 
 ////////////////////////////////BANK
  const getLoan = () => {
+
     console.log("hello");
     const bankBalance = parseInt(bankBalanceElement.value);
     const outstandingLoan = parseInt(outstandingLoanElement.value);
@@ -91,12 +92,14 @@ fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
     .then(computers => addComputersToMenu(computers));
 
 const addComputersToMenu = (computers) => {
+    
     computers.forEach(x => addComputerToMenu(x));
     computerPriceElement.innerText = computers[0].price;
     computerSpecsElement.innerText = computers[0].specs;
     laptopNameElement.innerText = computers[0].title;
     computerDescriptionElement.innerText = computers[0].description;
-    computerImageElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + computers.image;
+    computerImageElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + computers[0].image;
+
 }
 
 const addComputerToMenu = (computer) => {
