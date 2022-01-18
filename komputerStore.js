@@ -2,6 +2,7 @@
 const getALoanBtnElement = document.getElementById("getALoanBtn");
 const bankBtnElement = document.getElementById("bankBtn");
 const workBtnElement = document.getElementById("workBtn");
+const repayLoanBtnElement = document.getElementById("repayLoanBtn");
 const buyNowBtnElement = document.getElementById("buyNowBtn");
 
 //Get variables
@@ -30,7 +31,22 @@ let computerPrice = 0;
 
 
 ////////////////////////////////BANK
+const getLoan = () => {
+
+}
+
 ////////////////////////////////WORK
+const transferMoney = () => {
+
+}
+
+const increasePayBalance = () => {
+
+}
+
+const repayLoan = () => {
+
+}
 
 
 ////////////////////////////////LAPTOP
@@ -63,3 +79,7 @@ const handleComputerMenuChange = e => {
 }
 
 computersSelectElement.addEventListener("change", handleComputerMenuChange);
+getALoanBtnElement.addEventListener("click", getLoan);
+bankBtnElement.addEventListener("click", transferMoney);
+workBtnElement.addEventListener("click", increasePayBalance);
+repayLoanBtnElement.addEventListener("click", repayLoan);
