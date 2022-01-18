@@ -1,20 +1,20 @@
 //The buttons from komputerStore.html
 const getALoanBtnElement = document.getElementById("getALoanBtn");
-const getBankBtnElement = document.getElementById("bankBtn");
-const getWorkBtnElement = document.getElementById("workBtn");
-const getBuyNowBtnElement = document.getElementById("buyNowBtn");
+const bankBtnElement = document.getElementById("bankBtn");
+const workBtnElement = document.getElementById("workBtn");
+const buyNowBtnElement = document.getElementById("buyNowBtn");
 
 //Get variables
-const getBankBalanceElement = document.getElementById("bankBalance");
-const getOutstandingLoanElement = document.getElementById("outstandingLoanValue");
-const getPayBalanceElement = document.getElementById("payBalance");
-const getFeaturesElement = document.getElementById("featuresTitle");
-const getComputerSpecsElement = document.getElementById("computerSpecs");
-const getLaptopNameElement = document.getElementById("laptopName");
-const getComputerDescriptionElement = document.getElementById("computerDescription");
-const getComputerPriceElement = document.getElementById("computerPrice");
+const bankBalanceElement = document.getElementById("bankBalance");
+const outstandingLoanElement = document.getElementById("outstandingLoanValue");
+const payBalanceElement = document.getElementById("payBalance");
+const featuresElement = document.getElementById("featuresTitle");
+const computerSpecsElement = document.getElementById("computerSpecs");
+const laptopNameElement = document.getElementById("laptopName");
+const computerDescriptionElement = document.getElementById("computerDescription");
+const computerPriceElement = document.getElementById("computerPrice");
 //Select
-const getComputersSelectElement = document.getElementById("computers");
+const computersSelectElement = document.getElementById("computers");
 
 
 //Set variables
@@ -33,23 +33,4 @@ let computerPrice = 0;
 
 ////////////////////////////////LAPTOP
 fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
-    .then(response => response.json())
-    .then(data => computers = data)
-    .then(computers => addComputersToMenu(computers));
-
-    const addComputersToMenu = (computers) => {
-        computers.forEach(x => addComputersToMenu(x));
-        getComputerSpecs.innerText = computers[0].specs;
-    }
-
-    const addComputerToMenu = (computer) => {
-        const getComputerElement = document.createElement("option");
-        getComputerElement.value = computer.id;
-        getComputerElement.appendChild(document.createTextNode(computer.title));
-        getComputersSelectElement.appendChild(computerElement);
-    }
-
-    const handleComputerMenuChange = e => {
-        const getSelectedComputer = computers[e.target.selectedIndex];
-        getComputerSpecs.innerText = getSelectedComputer.specs;
-    }
+    
