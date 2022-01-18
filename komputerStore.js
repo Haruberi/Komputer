@@ -11,3 +11,11 @@ const getComputerSpecs = document.getElementById("computerSpecs");
 //Select
 const getComputersSelectElement = document.getElementById("computers");
 
+
+//Set variables
+let bankBalance = 200;
+let outstandingLoan = 0;
+let enterAmount = 0;
+let payBalance = 0;
+let increasePay = 100;
+let computers = [];
