@@ -24,6 +24,7 @@ let enterAmount = 0;
 let payBalance = 0;
 let increasePay = 100;
 let computers = [];
+let computerPrice = 0;
 
 
 ////////////////////////////////BANK
