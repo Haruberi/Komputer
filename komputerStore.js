@@ -56,7 +56,7 @@ let totalLoan = 0;
     //     alert(`You've already taken a loan`);
     } else {
         bankBalance = bankBalance + prompt;
-        outstandingLoanElement.innerText =  `Total loan: ${bankBalance} SEK`;
+        bankBalanceElement.innerText =  `Total loan: ${bankBalance} SEK`;
         //bankBalanceElement.innerText = bankBalance + ' kr';
     }
 }
@@ -66,9 +66,11 @@ const transferMoney = () => {
     
 }
 
-const increasePayBalance = () => {
+const increaseBtn = document.querySelector("#workBtn");
+const displayPayBalance = document.querySelector("#payBalance");
+// const increasePayBalance = () => {
 
-}
+// }
 
 const repayLoan = () => {
 
@@ -111,5 +113,9 @@ const handleComputerMenuChange = e => {
 computersSelectElement.addEventListener("change", handleComputerMenuChange);
 getALoanBtnElement.addEventListener("click", getLoan);
 bankBtnElement.addEventListener("click", transferMoney);
-workBtnElement.addEventListener("click", increasePayBalance);
+increaseBtn.addEventListener("click", () => {
+    displayPayBalance.innerText =
+    parseInt(displayPayBalance.innerText,10) + 100;
+})
+// workBtnElement.addEventListener("click", increasePayBalance);
 repayLoanBtnElement.addEventListener("click", repayLoan);
