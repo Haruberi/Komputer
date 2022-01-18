@@ -41,6 +41,10 @@ fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
 
 const addComputersToMenu = (computers) => {
     computers.forEach(x => addComputerToMenu(x));
+    computerPriceElement.innerText = computers[0].price;
+    computerSpecsElement.innerText = computers[0].specs;
+    laptopNameElement.innerText = computers[0].title;
+    computerDescriptionElement.innerText = computers[0].description;
 }
 
 const addComputerToMenu = (computer) => {
@@ -49,3 +53,13 @@ const addComputerToMenu = (computer) => {
     computerElement.appendChild(document.createTextNode(computer.title));
     computersSelectElement.appendChild(computerElement);
 }
+
+const handleComputerMenuChange = e => {
+    const selectedComputer = computers[e.target.selectedIndex];
+    computerPriceElement.innerText = selectedComputer.price;
+    computerSpecsElement.innerText = selectedComputer.specs;
+    laptopNameElement.innerText = selectedComputer.title;
+    computerDescriptionElement.innerText = selectedComputer.description;
+}
+
+computersSelectElement.addEventListener("change", handleComputerMenuChange);
