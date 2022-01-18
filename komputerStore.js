@@ -48,11 +48,12 @@ let totalLoan = 0;
     }
     */
     const prompt = Number(window.prompt('Enter an amount to loan: '));
+    alert (`Loan done!! 💸💸`)
 
     if (prompt > bankBalance * 2){
         alert('Your loan cannot be more than double you bank balance.');
-    } else if(prompt > 0){
-        alert(`You've already taken a loan`);
+    // } else if(prompt > 0){
+    //     alert(`You've already taken a loan`);
     } else {
         bankBalance = bankBalance + prompt;
         outstandingLoanElement.innerText =  `Total loan: ${bankBalance} SEK`;
@@ -62,7 +63,7 @@ let totalLoan = 0;
 
 ////////////////////////////////WORK
 const transferMoney = () => {
-
+    
 }
 
 const increasePayBalance = () => {
