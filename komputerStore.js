@@ -16,6 +16,7 @@ const computerSpecsElement = document.getElementById("computerSpecs");
 const laptopNameElement = document.getElementById("laptopName");
 const computerDescriptionElement = document.getElementById("computerDescription");
 const computerPriceElement = document.getElementById("computerPrice");
+const computerImageElement = document.getElementById("computerImage");
 //Select
 const computersSelectElement = document.getElementById("computers");
 
@@ -31,8 +32,35 @@ let computerPrice = 0;
 
 
 ////////////////////////////////BANK
-const getLoan = () => {
+ const getLoan = () => {
+    const bankBalance = parseInt(bankBalanceElement.value);
+    const outstandingLoan = parseInt(outstandingLoanElement.value);
+    const enterAmount = document.createElement("enterAmount")
 
+    if(outstandingLoan > 0) {
+        alert = outstandingLoan.innerText = `Your total loan is ${outstandingLoan.value} \n\n Press Word to\n Repay loan`;
+        outstandingLoanElement.innerText =  `Outstanding loan: ${enterAmount.innerText}`;
+    } else {
+        enterAmount.innerText = Number(window.prompt("Enter an amount: "));
+    } if (enterAmount > bankBalance * 2) {
+        enterAmount.innerText = Number(window.prompt("--Your loan cannot be more than double your balance--\n Enter an amount: ", ""));
+        outstandingLoanElement.innerText = `Outstanding loan: ${enterAmount.innerText}`;
+    }
+//     //If you have 1 loan already
+//     if (outstandingLoan > 0) {
+//         alert("Your total loan is" + outstandingLoan + ".\n\n Press Work to \n Repay loan");
+//         outstandingLoanElement.innerText = "Outstanding loan: " + enterAmount;
+//     } else {
+//         enterAmount = Number(window.prompt("Enter an amount: "))
+    
+//         if (enterAmount > bankBalance * 2 ) {
+//             enterAmount = Number(window.prompt("--Your loan cannot be more than double your balance--\n Enter an amount: ", ""));
+//             outstandingLoanElement.innerText = "Outstanding loan: " + enterAmount;
+//         } else {
+//             alert ("Your total loan now is: " + enterAmount);
+//             outstandingLoan+=1;
+//             outstandingLoanElement.innerText = "Outstanding loan: " + enterAmount;
+//         }
 }
 
 ////////////////////////////////WORK
@@ -61,6 +89,7 @@ const addComputersToMenu = (computers) => {
     computerSpecsElement.innerText = computers[0].specs;
     laptopNameElement.innerText = computers[0].title;
     computerDescriptionElement.innerText = computers[0].description;
+    computerImageElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + computers.image;
 }
 
 const addComputerToMenu = (computer) => {
@@ -76,6 +105,7 @@ const handleComputerMenuChange = e => {
     computerSpecsElement.innerText = selectedComputer.specs;
     laptopNameElement.innerText = selectedComputer.title;
     computerDescriptionElement.innerText = selectedComputer.description;
+    computerImageElement.src = `https://noroff-komputer-store-api.herokuapp.com/${selectedComputer.image}`;
 }
 
 computersSelectElement.addEventListener("change", handleComputerMenuChange);
