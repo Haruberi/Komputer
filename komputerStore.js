@@ -62,10 +62,12 @@ let totalLoan = 0;
 }
 
 ////////////////////////////////WORK
+//bank button
 const transferMoney = () => {
     
 }
 
+//work button
 const increaseBtn = document.querySelector("#workBtn");
 const displayPayBalance = document.querySelector("#payBalance");
 // const increasePayBalance = () => {
