@@ -23,29 +23,34 @@ const computersSelectElement = document.getElementById("computers");
 
 //Set variables
 let bankBalance = 200;
-let outstandingLoan = 0;
-let enterAmount = 0;
 let payBalance = 0;
 let increasePay = 100;
 let computers = [];
 let computerPrice = 0;
+let totalLoan = 0;
 
 
 ////////////////////////////////BANK
  const getLoan = () => {
+    console.log("hello");
     const bankBalance = parseInt(bankBalanceElement.value);
     const outstandingLoan = parseInt(outstandingLoanElement.value);
-    const enterAmount = document.createElement("enterAmount")
 
-    if(outstandingLoan > 0) {
-        alert = outstandingLoan.innerText = `Your total loan is ${outstandingLoan.value} \n\n Press Word to\n Repay loan`;
-        outstandingLoanElement.innerText =  `Outstanding loan: ${enterAmount.innerText}`;
-    } else {
-        enterAmount.innerText = Number(window.prompt("Enter an amount: "));
-    } if (enterAmount > bankBalance * 2) {
-        enterAmount.innerText = Number(window.prompt("--Your loan cannot be more than double your balance--\n Enter an amount: ", ""));
-        outstandingLoanElement.innerText = `Outstanding loan: ${enterAmount.innerText}`;
+    if(totalLoan > 0) {
+        alert (`Your total loan is ${totalLoan} \n\n Press Word to\n Repay loan`);
+        outstandingLoan.innerText =  `Outstanding loan: ${totalLoan}`;
+    
+    } else if(totalLoan > bankBalance * 2) {
+        totalLoan = Number(window.prompt("--Your loan cannot be more than double your balance--\n Enter an amount: ", ""));
+        outstandingLoan.innerText = `Outstanding loan: ${totalLoan}`;
     }
+    else {
+        totalLoan = Number(window.prompt("Enter an amount: "));
+        alert("Loan accomplished!!💸");
+        outstandingLoanElement.innerText = `Your loan is: ${totalLoan}`;
+        // outstandingLoan.innerText = `Outstanding loan: ${enterAmount.innerText}`;
+    }
+
 //     //If you have 1 loan already
 //     if (outstandingLoan > 0) {
 //         alert("Your total loan is" + outstandingLoan + ".\n\n Press Work to \n Repay loan");
@@ -69,7 +74,9 @@ const transferMoney = () => {
 }
 
 const increasePayBalance = () => {
-
+    const payBalance = parseInt(payBalanceElement.value);
+    payBalance +=100;
+    payBalanceElement.innerText = `${payBalance}`;
 }
 
 const repayLoan = () => {
