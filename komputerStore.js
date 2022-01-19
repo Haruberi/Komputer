@@ -1,4 +1,4 @@
-//The buttons from komputerStore.html
+//The buttons
 const getALoanBtnElement = document.getElementById("getALoanBtn");
 const bankBtnElement = document.getElementById("bankBtn");
 const workBtnElement = document.getElementById("workBtn");
@@ -8,7 +8,7 @@ const workBtnElement = document.getElementById("workBtn");
 
 const buyNowBtnElement = document.getElementById("buyNowBtn");
 
-//Get variables
+//The variables
 const bankBalanceElement = document.getElementById("bankBalance");
 const outstandingLoanElement = document.getElementById("outstandingLoanValue");
 const loanTitleElement = document.getElementById("loanTitle");
@@ -21,7 +21,7 @@ const laptopNameElement = document.getElementById("laptopName");
 const computerDescriptionElement = document.getElementById("computerDescription");
 const computerPriceElement = document.getElementById("computerPrice");
 const computerImageElement = document.getElementById("computerImage");
-//Select
+//The select
 const computersSelectElement = document.getElementById("computers");
 
 
@@ -35,9 +35,8 @@ let money = [];
 let computerPrice = 0;
 
 
-
-// document.getElementById("repayLoanBtn").disabled = false;
 ////////////////////////////////BANK
+//The function for button 'Get a Loan', to get a loan
  const getLoan = () => {
     
     const prompt = Number(window.prompt('Enter an amount to loan: '));
@@ -66,13 +65,13 @@ let computerPrice = 0;
 //         // bankBalanceElement.innerText = setToZero.innerText = parseInt(setToZero.innerText,0) + 0;
 //     }
 // }
-//work button
-const increaseBtn = document.querySelector("#workBtn");
+
+const increaseMoney = document.querySelector("#workBtn");
 const displayPayBalance = document.querySelector("#payBalance");
 const loanTransfer = document.querySelector("#outstandingLoanValue");
 
-
-increaseBtn.addEventListener("click", () => {
+//The function for button 'Work' - to increase pay balance
+increaseMoney.addEventListener("click", () => {
     if(outstandingLoanValue > 0){
         payBalance = displayPayBalance.innerText =
     parseInt(displayPayBalance.innerText) + 90;
@@ -87,6 +86,21 @@ increaseBtn.addEventListener("click", () => {
 //     displayPayBalance.innerText =
 //     parseInt(displayPayBalance.innerText,10) + 100;
 // });
+
+//The function for button 'Bank', to transfer money
+const transferMoney = document.querySelector("#bankBtn");
+
+transferMoney.addEventListener("click", () => {
+
+})
+
+//The function for button 'Repay loan', to repay loaned money
+const repayLoan = document.querySelector("#repayLoanBtn");
+
+repayLoan.addEventListener("click", () => {
+
+})
+
 
 ///////////////////////////////////>///////////////////////////////////LAPTOP
 fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
@@ -121,7 +135,9 @@ const handleComputerMenuChange = e => {
     computerImageElement.src = `https://noroff-komputer-store-api.herokuapp.com/${selectedComputer.image}`;
 }
 
-computersSelectElement.addEventListener("change", handleComputerMenuChange);
+
 getALoanBtnElement.addEventListener("click", getLoan);
-bankBtnElement.addEventListener("click", transferMoney);
-repayLoanBtnElement.addEventListener("click", repayLoan);
+// bankBtnElement.addEventListener("click", transferMoney);
+// repayLoanBtnElement.addEventListener("click", repayLoan);
+computersSelectElement.addEventListener("change", handleComputerMenuChange);
+
