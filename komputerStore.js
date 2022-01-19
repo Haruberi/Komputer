@@ -54,11 +54,11 @@ let computerPrice = 0;
 ////////////////////////////////WORK
 //bank button
 const transferMoney = () => {
-    if(payBalanceElement === 0) {
-        alert(`You have no money in pay at the moment`);
+    if(outstandingLoanValue > 0) {
+        alert(`You have one loan`);
     } else {
         const transferPayBalance = document.querySelector("#payBalance");
-        transferPayBalance.innerText = parseInt(transferPayBalance.innerText,10) -100;
+       bankBalanceElement.innerText = transferPayBalance.innerText = parseInt(transferPayBalance.innerText,10) + 100;
     }
 }
 
