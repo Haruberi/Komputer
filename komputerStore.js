@@ -26,7 +26,6 @@ const computersSelectElement = document.getElementById("computers");
 
 
 //Set variables
-let bankBalance = 200;
 let outstandingLoanValue = 0;
 let increasePay = 100;
 let increasePay2 = 90;
@@ -35,6 +34,13 @@ let money = [];
 let computerPrice = 0;
 
 
+const increaseMoney = document.querySelector("#workBtn");
+const displayPayBalance = document.querySelector("#payBalance");
+const loanTransfer = document.querySelector("#outstandingLoanValue");
+const transferMoney = document.querySelector("#bankBtn");
+const repayLoan = document.querySelector("#repayLoanBtn");
+const bankBalanceValue = document.querySelector("#bankBalance");
+
 ////////////////////////////////BANK
 //The function for button 'Get a Loan', to get a loan
  const getLoan = () => {
@@ -42,7 +48,7 @@ let computerPrice = 0;
     const prompt = Number(window.prompt('Enter an amount to loan: '));
     // alert (`💸--Loan done--💸`)
     document.getElementById("repayLoanBtn").style.display = "block";
-        if ( prompt > bankBalance *2) {
+        if ( prompt > bankBalanceValue.innerText *2) {
             alert('Your loan cannot be more than double you bank balance.');
             loanTitleElement.innerText = `Total loan: ${outstandingLoanValue} SEK`;        
         }
@@ -66,10 +72,6 @@ let computerPrice = 0;
 //     }
 // }
 
-const increaseMoney = document.querySelector("#workBtn");
-const displayPayBalance = document.querySelector("#payBalance");
-const loanTransfer = document.querySelector("#outstandingLoanValue");
-
 //The function for button 'Work' - to increase pay balance
 increaseMoney.addEventListener("click", () => {
     if(outstandingLoanValue > 0){
@@ -88,15 +90,17 @@ increaseMoney.addEventListener("click", () => {
 // });
 
 //The function for button 'Bank', to transfer money
-const transferMoney = document.querySelector("#bankBtn");
-
 transferMoney.addEventListener("click", () => {
-
+    if(payBalance > 0) {
+        bankBalance = bankBalanceValue.innerText =
+    parseInt(bankBalanceValue.innerText);
+    } else {
+        alert ('Press Work to get Pay')
+    }
 })
 
-//The function for button 'Repay loan', to repay loaned money
-const repayLoan = document.querySelector("#repayLoanBtn");
 
+//The function for button 'Repay loan', to repay loaned money
 repayLoan.addEventListener("click", () => {
 
 })
