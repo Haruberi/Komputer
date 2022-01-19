@@ -54,14 +54,17 @@ let computerPrice = 0;
 ////////////////////////////////WORK
 //bank button
 const transferMoney = () => {
-    if(outstandingLoanValue > 0) {
-        alert(`You have one loan`);
+    if (loanTitleElement.innerText > 0)
+    {
+        const transferPayBalance = document.querySelector("#payBalance");
+        outstandingLoanElement.innerText = transferPayBalance.innerText = parseInt(transferPayBalance.innerText,10) + (loanTitleElement.innerText = (100 * 0.10));  
     } else {
         const transferPayBalance = document.querySelector("#payBalance");
-       bankBalanceElement.innerText = transferPayBalance.innerText = parseInt(transferPayBalance.innerText,10) + 100;
+        bankBalanceElement.innerText = transferPayBalance.innerText = parseInt(transferPayBalance.innerText,10) + 100;
+        const setToZero = document.querySelector("#payBalance");
+        bankBalanceElement.innerText = setToZero.innerText = parseInt(setToZero.innerText,0) + 0;
     }
 }
-
 //work button
 const increaseBtn = document.querySelector("#workBtn");
 const displayPayBalance = document.querySelector("#payBalance");
@@ -110,7 +113,11 @@ bankBtnElement.addEventListener("click", transferMoney);
 increaseBtn.addEventListener("click", () => {
     displayPayBalance.innerText =
     parseInt(displayPayBalance.innerText,10) + 100;
-});
+})
+// increaseBtn.addEventListener("click", () => {
+//     displayPayBalance.innerText =
+//     parseInt(displayPayBalance.innerText,10) + 100;
+// });
 
 
 repayLoanBtnElement.addEventListener("click", repayLoan);
