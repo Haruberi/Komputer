@@ -88,21 +88,6 @@ increaseBtn.addEventListener("click", () => {
 //     parseInt(displayPayBalance.innerText,10) + 100;
 // });
 
-
-
-
-//show repay loan button
-
-
-
-
-
-
-
-
-
-
-
 ///////////////////////////////////>///////////////////////////////////LAPTOP
 fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
     .then(response => response.json())
@@ -139,14 +124,4 @@ const handleComputerMenuChange = e => {
 computersSelectElement.addEventListener("change", handleComputerMenuChange);
 getALoanBtnElement.addEventListener("click", getLoan);
 bankBtnElement.addEventListener("click", transferMoney);
-
-
-
-
-
-
-
-
-
-
 repayLoanBtnElement.addEventListener("click", repayLoan);
