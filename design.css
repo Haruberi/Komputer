@@ -52,3 +52,16 @@
     font-size: 30px;
 }
 
+/*REPAY LOAN BUTTON*/
+#repayLoanBtn {
+    display: none;
+}z
+#repayLoanBtn:hover {
+    background-color: rgb(245, 112, 112);
+}
+#repayLoanBtn:active {
+    background-color: rgb(245, 112, 112);
+    font-size: 15px;
+}
+
+
