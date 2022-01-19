@@ -23,7 +23,7 @@ const computersSelectElement = document.getElementById("computers");
 
 //Set variables
 let bankBalance = 200;
-let payBalance = 0;
+let outstandingLoanValue = 0;
 let increasePay = 100;
 let computers = [];
 let computerPrice = 0;
@@ -32,9 +32,6 @@ let totalLoan = 0;
 
 ////////////////////////////////BANK
  const getLoan = () => {
-    //const bankBalance = parseInt(bankBalanceElement.value);
-    //const outstandingLoan = parseInt(outstandingLoanElement.value);
-
     /*
     if (totalLoan == 0) {
         totalLoan = Number(window.prompt("Enter an amount: "));
@@ -48,15 +45,18 @@ let totalLoan = 0;
     }
     */
     const prompt = Number(window.prompt('Enter an amount to loan: '));
-    alert (`Loan done!! 💸💸`)
+    alert (`💸--Loan done--💸`)
 
-    if (prompt > bankBalance * 2){
+    // if (prompt >= 1){
+    //     alert (`You cannot have two loans.\n Repay the first loan first.`)
+    // }
+    if (prompt > bankBalance * 2) {
         alert('Your loan cannot be more than double you bank balance.');
     // } else if(prompt > 0){
     //     alert(`You've already taken a loan`);
     } else {
-        bankBalance = bankBalance + prompt;
-        bankBalanceElement.innerText =  `Total loan: ${bankBalance} SEK`;
+        outstandingLoanValue = prompt;
+        outstandingLoanElement.innerText =  `Total loan: ${outstandingLoanValue} SEK`;
         //bankBalanceElement.innerText = bankBalance + ' kr';
     }
 }
