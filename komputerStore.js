@@ -2,12 +2,15 @@
 const getALoanBtnElement = document.getElementById("getALoanBtn");
 const bankBtnElement = document.getElementById("bankBtn");
 const workBtnElement = document.getElementById("workBtn");
+
 const repayLoanBtnElement = document.getElementById("repayLoanBtn");
+
 const buyNowBtnElement = document.getElementById("buyNowBtn");
 
 //Get variables
 const bankBalanceElement = document.getElementById("bankBalance");
 const outstandingLoanElement = document.getElementById("outstandingLoanValue");
+const loanTitleElement = document.getElementById("loanTitle");
 
 const payBalanceElement = document.getElementById("payBalance");
 
@@ -30,8 +33,10 @@ let computerPrice = 0;
 let totalLoan = 0;
 
 
+
 ////////////////////////////////BANK
  const getLoan = () => {
+
     /*
     if (totalLoan == 0) {
         totalLoan = Number(window.prompt("Enter an amount: "));
@@ -45,21 +50,29 @@ let totalLoan = 0;
     }
     */
     const prompt = Number(window.prompt('Enter an amount to loan: '));
-    alert (`💸--Loan done--💸`)
+    // alert (`💸--Loan done--💸`)
+        if ( prompt > bankBalance *2) {
+            alert('Your loan cannot be more than double you bank balance.');
+            loanTitleElement.innerText = `Total loan: ${outstandingLoanValue} SEK`; 
+        }
+        else {
+            outstandingLoanValue = prompt;
+            loanTitleElement.innerText = `Total loan: ${outstandingLoanValue} SEK`;   
+        }
 
-    // if (prompt >= 1){
-    //     alert (`You cannot have two loans.\n Repay the first loan first.`)
-    // }
-    if (prompt > bankBalance * 2) {
-        alert('Your loan cannot be more than double you bank balance.');
+
+
+    // if (prompt + bankBalance *2) {
+    //     
     // } else if(prompt > 0){
     //     alert(`You've already taken a loan`);
-    } else {
-        outstandingLoanValue = prompt;
-        outstandingLoanElement.innerText =  `Total loan: ${outstandingLoanValue} SEK`;
+    
+    // else if (prompt == prompt) {
+    //     alert (`You already have a loan of ${outstandingLoanValue}.\n Press Repay Loan before making a new loan.`);
+
         //bankBalanceElement.innerText = bankBalance + ' kr';
     }
-}
+
 
 ////////////////////////////////WORK
 //bank button
@@ -74,9 +87,7 @@ const displayPayBalance = document.querySelector("#payBalance");
 
 // }
 
-const repayLoan = () => {
 
-}
 
 
 ////////////////////////////////LAPTOP
@@ -118,6 +129,5 @@ bankBtnElement.addEventListener("click", transferMoney);
 increaseBtn.addEventListener("click", () => {
     displayPayBalance.innerText =
     parseInt(displayPayBalance.innerText,10) + 100;
-})
-// workBtnElement.addEventListener("click", increasePayBalance);
+});
 repayLoanBtnElement.addEventListener("click", repayLoan);
