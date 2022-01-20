@@ -95,7 +95,7 @@ transferMoney.addEventListener("click", () => {
 })
 //The function for the button Repay Loan
 repayLoan.addEventListener("click", () => {
-    outstandingLoanValue - outstandingLoanValue;
+    outstandingLoanValue = loanTitleElement.innerText = `Total loan: ${outstandingLoanValue-outstandingLoanValue}`;
 })
 
 
@@ -171,7 +171,6 @@ const handleComputerMenuChange = e => {
 
 
 getALoanBtnElement.addEventListener("click", getLoan);
-// bankBtnElement.addEventListener("click", transferMoney);
-// repayLoanBtnElement.addEventListener("click", repayLoan);
 computersSelectElement.addEventListener("change", handleComputerMenuChange);
+
 
