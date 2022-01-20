@@ -12,6 +12,7 @@ const buyNowBtnElement = document.getElementById("buyNowBtn");
 const bankBalanceElement = document.getElementById("bankBalance");
 const outstandingLoanElement = document.getElementById("outstandingLoanValue");
 const loanTitleElement = document.getElementById("loanTitle");
+const balanceTitleElement = document.getElementById("balanceTitle");
 
 const payBalanceElement = document.getElementById("payBalance");
 
@@ -48,7 +49,7 @@ const bankBalanceValue = document.querySelector("#bankBalance");
     const prompt = Number(window.prompt('Enter an amount to loan: '));
     // alert (`💸--Loan done--💸`)
     document.getElementById("repayLoanBtn").style.display = "block";
-        if ( prompt > bankBalanceValue.innerText *2) {
+        if ( prompt > bankBalanceValue * 2) {
             alert('Your loan cannot be more than double you bank balance.');
             loanTitleElement.innerText = `Total loan: ${outstandingLoanValue} SEK`;        
         }
@@ -74,36 +75,65 @@ const bankBalanceValue = document.querySelector("#bankBalance");
 
 //The function for button 'Work' - to increase pay balance
 increaseMoney.addEventListener("click", () => {
+        payBalance = displayPayBalance.innerText =
+        parseInt(displayPayBalance.innerText) + 100;
+})
+//The function for the button 'Bank'
+transferMoney.addEventListener("click", () => {
+    balanceTitleElement.innerText = `Balance: ${payBalance} SEK`;
     if(outstandingLoanValue > 0){
         payBalance = displayPayBalance.innerText =
     parseInt(displayPayBalance.innerText) + 90;
     loanTitleElement.innerText = `Total loan: ${outstandingLoanValue - payBalance} SEK`;
 
-    } else {
+    } else if (outstandingLoanValue < 0){
         payBalance = displayPayBalance.innerText =
         parseInt(displayPayBalance.innerText) + 100;
     }
-})
-// increaseBtn.addEventListener("click", () => {
-//     displayPayBalance.innerText =
-//     parseInt(displayPayBalance.innerText,10) + 100;
-// });
-
-//The function for button 'Bank', to transfer money
-transferMoney.addEventListener("click", () => {
-    if(payBalance > 0) {
-        bankBalance = bankBalanceValue.innerText =
-    parseInt(bankBalanceValue.innerText);
-    } else {
-        alert ('Press Work to get Pay')
+    else {
     }
 })
+//The function for the button Repay Loan
+repayLoan.addEventListener("click", () => {
+    outstandingLoanValue - outstandingLoanValue;
+})
+
+
+
+
+
+
+// increaseMoney.addEventListener("click", () => {
+//     if(outstandingLoanValue > 0){
+//         payBalance = displayPayBalance.innerText =
+//     parseInt(displayPayBalance.innerText) + 90;
+//     loanTitleElement.innerText = `Total loan: ${outstandingLoanValue - payBalance} SEK`;
+//     } else {
+//         payBalance = displayPayBalance.innerText =
+//         parseInt(displayPayBalance.innerText) + 100;
+//     }
+// })
+// // increaseBtn.addEventListener("click", () => {
+// //     displayPayBalance.innerText =
+// //     parseInt(displayPayBalance.innerText,10) + 100;
+// // });
+
+// //The function for button 'Bank', to transfer money
+// transferMoney.addEventListener("click", () => {
+
+//     // if(payBalance > 0) {
+//     //     bankBalance = bankBalanceValue.innerText =
+//     // parseInt(bankBalanceValue.innerText);
+//     // } else {
+//     //     alert ('Press Work to get Pay');
+//     // }
+// })
 
 
 //The function for button 'Repay loan', to repay loaned money
-repayLoan.addEventListener("click", () => {
+// repayLoan.addEventListener("click", () => {
 
-})
+// })
 
 
 ///////////////////////////////////>///////////////////////////////////LAPTOP

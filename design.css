@@ -53,7 +53,6 @@
 }
 #repayLoanBtn:active {
     background-color: rgb(245, 112, 112);
-    font-size: 15px;
 }
 
 #laptopName {
