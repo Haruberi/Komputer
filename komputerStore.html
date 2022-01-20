@@ -11,28 +11,33 @@
 </head>
 
 <body>
+<div class = "container">
+    <div id = "bankBox">
+        <!--BANK PAGE-->
+        <h2>Bank</h2>
+        <b id = "balanceTitle">Balance: </b> <b id = "bankBalance"></b>
+        <br>
+        <b id = "loanTitle"></b><b id = "outstandingLoanValue"><b>
+        <br>
+        <button class = "btn" id = "getALoanBtn">Get a Loan</button>
+    </div>
 
-    <!--BANK PAGE-->
-    <h2>Bank</h2>
-    <b id = "balanceTitle">Balance: </b> <b id = "bankBalance">0</b>
-    <br>
-    <b id = "loanTitle"></b><b id = "outstandingLoanValue"><b>
-    <br>
-    <button class = "btn" id = "getALoanBtn">Get a Loan</button>
+    <div id = "workBox">
+        <!--WORK PAGE-->
+        <h2>Work</h2>
+        <b>Pay: </b><b id = "payBalance">0</b>
+        <br>
+        <button class = "btn" id = "bankBtn">Bank</button>
+        <button class = "btn" id = "workBtn">Work</button>
+        <button class = "btn" id = "repayLoanBtn">Repay Loan</button>
+    </div>
 
-    <!--WORK PAGE-->
-    <h2>Work</h2>
-    <b>Pay: </b><b id = "payBalance">0</b>
-    <br>
-    <button class = "btn" id = "bankBtn">Bank</button>
-    <button class = "btn" id = "workBtn">Work</button>
-    <button class = "btn" id = "repayLoanBtn">Repay Loan</button>
-
-    <!--LAPTOP PAGE-->
-    <h2>Laptop</h2>
-    <select name = "computers" id = "computers"></select>
-    <h3 id = "featuresTitle">Features: </h3>
-    <p id = "computerSpecs"></p>
+    <div id = "laptopBox">
+        <!--LAPTOP PAGE-->
+        <h2>Laptop</h2>
+        <select name = "computers" id = "computers"></select>
+        <h3 id = "featuresTitle">Features: </h3>
+        <p id = "computerSpecs"></p>
 
         <img id = "computerImage"
         width="150" 
@@ -44,6 +49,10 @@
         <br>
         <button class = "btn" id = "buyNowBtn">BUY NOW</button>
         <p id = "cannotAfford"></p>
+    </div>
+    
+</div>
+
     <script src = "komputerStore.js"></script>
 </body>
 </html>

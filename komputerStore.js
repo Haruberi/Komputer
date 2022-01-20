@@ -36,10 +36,13 @@ let computerPrice = 0;
 
 
 const increaseMoney = document.querySelector("#workBtn");
-const displayPayBalance = document.querySelector("#payBalance");
-const loanTransfer = document.querySelector("#outstandingLoanValue");
 const transferMoney = document.querySelector("#bankBtn");
 const repayLoan = document.querySelector("#repayLoanBtn");
+const buyComputer = document.querySelector("#buyNowBtn");
+const displayPayBalance = document.querySelector("#payBalance");
+const loanTransfer = document.querySelector("#outstandingLoanValue");
+const selectedComputerPrice = document.querySelector("#computerPrice");
+
 const bankBalanceValue = document.querySelector("#bankBalance");
 
 ////////////////////////////////BANK
@@ -93,11 +96,19 @@ transferMoney.addEventListener("click", () => {
     else {
     }
 })
-//The function for the button Repay Loan
+//The function for the button 'Repay Loan'
 repayLoan.addEventListener("click", () => {
     outstandingLoanValue = loanTitleElement.innerText = `Total loan: ${outstandingLoanValue-outstandingLoanValue}`;
 })
 
+//The function for the button 'Buy now'
+buyComputer.addEventListener("click",() => {
+    if(bankBalance <= computerPrice) {
+        alert ("You can buy the laptop 😄");
+    } else {
+        alert("You cannot afford the laptop 😭");
+    }
+})
 
 
 
