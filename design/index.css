@@ -2,28 +2,3 @@
     font-size: 30px;
     font-family:Arial, Helvetica, sans-serif;
 }
-
-/*BOX DESIGN*/
-
-.container {
-    width: 600px;
-    padding-top: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-    align-content: center
-}
-
-#bankBox {
-    border: 3px solid darkblue;
-}
-#workBox {
-    border: 3px solid darkblue;
-}
-#laptopBox {
-    border: 3px solid darkblue;
-
-}
-#boxBelow {
-    border: 3px solid darkblue;
-}
