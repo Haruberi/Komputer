@@ -1,0 +1,68 @@
+.btn {
+    padding: 15px 25px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 0 2px rgb(137, 160, 159);
+}
+/*GET A LOAN BUTTON*/
+#getALoanBtn:hover {background-color: aquamarine}
+
+#getALoanBtn:active {
+    background-color: aquamarine;
+    box-shadow: 0 5px rgb(137, 160, 159);
+    transform: translateY(4px);
+}
+
+/* work button */
+
+#bankBtn:hover { 
+    color:black;
+    background-color: rgb(243, 243, 140)
+}
+
+#bankBtn:active {
+    background-color: rgb(243, 243, 140);
+    box-shadow: 0 5px rgb(137, 160, 159);
+    transform: translateY(4px);
+}
+
+#workBtn:hover {
+    color: white;
+    background-color: blue
+}
+
+#workBtn:active {
+    background-color: blue;
+    box-shadow: 0 5px rgb(137, 160, 159);
+    transform: translateY(4px);
+}
+
+/*BUY NOW BUTTON*/
+#buyNowBtn:hover {
+    color: black;
+    background-color: #34c0eb;
+}
+
+#buyNowbtn:active {
+    background-color: #34c0eb;
+    box-shadow: 0 5px rgb(137, 160, 159);
+    transform: translateY(4px);
+}
+
+/*REPAY LOAN BUTTON*/
+#repayLoanBtn {
+    visibility: hidden;
+}
+#repayLoanBtn:hover {
+    color:white;
+    background-color:red;
+}
+
+#repayLoanBtn:active {
+    background-color: red;
+    box-shadow: 0 5px rgb(137, 160, 159);
+    transform: translateY(4px);
+}
