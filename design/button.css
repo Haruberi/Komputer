@@ -1,68 +1,57 @@
 .btn {
-    padding: 15px 25px;
+    padding: 5px 5px;
     font-size: 12px;
     text-align: center;
     cursor: pointer;
     outline: none;
     border-radius: 15px;
-    box-shadow: 0 2px rgb(137, 160, 159);
+    box-shadow: 0 2px rgb (137, 160, 159);
+}
+.btn:active {
+    box-shadow: 0 3px rgb(137, 160, 159);
+    transform: translateY(2px);
 }
 /*GET A LOAN BUTTON*/
-#getALoanBtn:hover {background-color: aquamarine}
-
+#getALoanBtn:hover {
+    background-color: aquamarine;
+}
 #getALoanBtn:active {
     background-color: aquamarine;
-    box-shadow: 0 5px rgb(137, 160, 159);
-    transform: translateY(4px);
 }
-
-/* work button */
-
-#bankBtn:hover { 
-    color:black;
-    background-color: rgb(243, 243, 140)
+/*BANK BUTTON*/
+#bankBtn:hover {
+    background-color: rgb(235, 235, 123);
 }
-
 #bankBtn:active {
-    background-color: rgb(243, 243, 140);
-    box-shadow: 0 5px rgb(137, 160, 159);
-    transform: translateY(4px);
+    background-color: rgb(235, 235, 123);
 }
-
+/*WORK BUTTON*/
 #workBtn:hover {
-    color: white;
-    background-color: blue
+    background-color: blue;
+    color:white;
 }
-
 #workBtn:active {
     background-color: blue;
-    box-shadow: 0 5px rgb(137, 160, 159);
-    transform: translateY(4px);
+    color:white;
 }
-
 /*BUY NOW BUTTON*/
 #buyNowBtn:hover {
-    color: black;
     background-color: #34c0eb;
 }
 
-#buyNowbtn:active {
+#buyNowBtn:active {
     background-color: #34c0eb;
-    box-shadow: 0 5px rgb(137, 160, 159);
-    transform: translateY(4px);
+    font-size: 15px;
 }
 
 /*REPAY LOAN BUTTON*/
 #repayLoanBtn {
-    visibility: hidden;
+    display:none;
+    /* hidden */
 }
 #repayLoanBtn:hover {
-    color:white;
-    background-color:red;
+    background-color: rgb(245, 112, 112);
 }
-
 #repayLoanBtn:active {
-    background-color: red;
-    box-shadow: 0 5px rgb(137, 160, 159);
-    transform: translateY(4px);
+    background-color: rgb(245, 112, 112);
 }
