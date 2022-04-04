@@ -1,0 +1,24 @@
+* {
+    z-index: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    border-radius: 40px;
+    float:left;
+    width: 33.33%;
+    padding: 70px;
+    height: 40vh;
+}
+
+.belowBox {
+    border-radius: 40px;
+    height: 25vh;
+    padding: 70px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
