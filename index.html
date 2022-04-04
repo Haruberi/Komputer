@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Komputer Store</title>
     <!--DESIGN PAGE-->
-    <link rel = "stylesheet"
-                href = "design.css"/>
+    <link rel = "stylesheet" href = "design.css"/>
+    <link rel="stylesheet" href="/design/box_design.css"/>
+    <link rel="stylesheet" href="/design/button.css"/>
+
 </head>
 
 <body>
+         <!--BANK PAGE-->
 <div class = "container">
     <div id = "bankBox">
         <!--BANK PAGE-->
         <h2>Bank</h2>
-        <b id = "balanceTitle">Balance: </b> <b id = "bankBalance">0</b>
+        <b>Balance: </b> <b id = "bankBalance">0</b>
         <br>
         <b id = "loanTitle"></b><b id = "outstandingLoanValue"><b>
         <br>
@@ -27,9 +30,9 @@
         <h2>Work</h2>
         <b>Pay: </b><b id = "payBalance">0</b>
         <br>
-        <button class = "btn" id = "bankBtn">Bank</button>
-        <button class = "btn" id = "workBtn">Work</button>
-        <button class = "btn" id = "repayLoanBtn">Repay Loan</button>
+        <button class = "btn" id = "bankBtn" onclick="transferMoney()">Bank</button>
+        <button class = "btn" id = "workBtn" onclick="increasePayBalance()">Work</button>
+        <button class = "btn" id = "repayLoanBtn" onclick="repayMoney()">Repay Loan</button>
     </div>
 
     <div id = "laptopBox">
@@ -54,6 +57,6 @@
 
 </div>
 
-    <script src = "komputerStore.js"></script>
+    <script src = "app.js"></script>
 </body>
 </html>
