@@ -3,14 +3,6 @@
     box-sizing: border-box;
 }
 
-.box {
-    border-radius: 40px;
-    float:left;
-    width: 33.33%;
-    padding: 70px;
-    height: 40vh;
-}
-
 .belowBox {
     border-radius: 40px;
     height: 25vh;
@@ -32,19 +24,22 @@
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
-    align-content: center
+    align-content: center;
 }
 
 #bankBox {
-    border: 3px solid darkblue;
+    background-color: #d7f1e7;
+    border: 2px solid black;
 }
 #workBox {
-    border: 3px solid darkblue;
+    background-color: #d7e7f1;
+    border: 2px solid black;
 }
 #laptopBox {
-    border: 3px solid darkblue;
+    background-color: #e1d7f1;
+    border: 2px solid black;
 
 }
 #boxBelow {
-    border: 3px solid darkblue;
+    border: 2px solid black;
 }
