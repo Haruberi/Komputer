@@ -42,7 +42,7 @@ let computerPrice = [];
 // const repayLoan = document.querySelector("#repayLoanBtn");
 // const buyComputer = document.querySelector("#buyNowBtn");
 const displayPayBalance = document.querySelector("#payBalance");
-const loanTransfer = document.querySelector("#outstandingLoanValue");
+// const loanTransfer = document.querySelector("#outstandingLoanValue");
 const selectedComputerPrice = document.querySelector("#computerPrice");
 
 //getLoan - GetALoanButton
@@ -62,7 +62,10 @@ const getLoan = () => {
 
 //increaseMoney - WorkButton
 const increaseMoney = () => {
+    setPay();
+}
 
+function setPay() {
 }
 
 //transferMoney - BankButton
@@ -71,29 +74,29 @@ const transferMoney = () => {
     balanceElement.value = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);
     
     if(outstandingLoanValue > 0){
-        payBalance = displayPayBalance.innerText =
-    parseInt(displayPayBalance.innerText) + 90;
+        payBalance = payBalanceElement.innerText =
+    parseInt(payBalanceElement.innerText) + 90;
     loanTitleElement.innerText = 'Total loan: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(outstandingLoanValue - payBalance);
-    displayPayBalance.innerText == new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance-payBalance);;
+    payBalanceElement.innerText == new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance-payBalance);;
     }
     else {
-        bankBalance = displayPayBalance.innerText =
-        parseInt(displayPayBalance.innerText) = 'Balance: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);;
+        bankBalance = payBalanceElement.innerText =
+        parseInt(payBalanceElement.innerText) = 'Balance: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);;
     }
 
 }
 
-//repayLoan - RepayLoanButton
+//repayLoan - RepayLoanButton - works
 const repayLoan = () => {
-    outstandingLoanValue = loanTitleElement.innerText = 'Total loan: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(outstandingLoanValue-outstandingLoanValue);
+    loanTitleElement.innerText = 'Total loan: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(outstandingLoanValue-outstandingLoanValue);
 }
 
-//buyComputer - BuyNowButton - works
+//buyComputer - BuyNowButton - 
 const buyComputer = () => {
-    if (balanceElement.value >= computerPrice.value) {
+    if (balanceElement.value >= computerPriceElement.value) {
         alert('You are the owner of a laptop!');
 
-        balanceElement.value = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(computerPrice.value - bankBalance.value);
+        balanceElement.value = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(computerPriceElement.value - bankBalance.value);
     } else {
         alert('You cannot afford the laptop.');
     }
