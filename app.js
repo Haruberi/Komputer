@@ -36,18 +36,12 @@ let computers = [];
 let money = [];
 let computerPrice = [];
 
-//remove all by the end
-//const increaseMoney = document.querySelector("#workBtn");
-// const transferMoney = document.querySelector("#bankBtn");
-// const repayLoan = document.querySelector("#repayLoanBtn");
-// const buyComputer = document.querySelector("#buyNowBtn");
-const displayPayBalance = document.querySelector("#payBalance");
-// const loanTransfer = document.querySelector("#outstandingLoanValue");
-const selectedComputerPrice = document.querySelector("#computerPrice");
-
 //getLoan - GetALoanButton
 const getLoan = () => {
 
+    if (outstandingLoanElement.value > 0) {
+        alert('You need to work in order to repay your current loan.');
+    }
     const prompt = Number(window.prompt('Enter an amount to loan: '));
     document.getElementById('repayLoanBtn').style.display = 'block';
         if ( prompt > balanceElement.value * 2) {
