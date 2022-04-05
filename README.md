@@ -5,6 +5,7 @@ Build a dynamic webpage using JavaScript.
 - [Background](#background)
 - [Install](#install)
 - [Usage](#usage)
+- [Wireframe](#usage)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
 - [License](#license)
@@ -31,6 +32,11 @@ git clone https://github.com/Haruberi/Komputer.git
 ```
 Open live server
 ```
+
+## Wireframe
+
+[![wireframe](https://img.shields.io/badge/Komputer_Store_app_Wireframe-HERE-orange.svg?style=flat-square)](https://github.com/Haruberi/Komputer/wiki/Wireframe)
+
 
 ## Maintainers
 
