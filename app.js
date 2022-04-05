@@ -2,6 +2,7 @@ const getALoanBtnElement = document.getElementById("getALoanBtn");
 const bankBtnElement = document.getElementById("bankBtn");
 const workBtnElement = document.getElementById("workBtn");
 const buyNowBtnElement = document.getElementById("buyNowBtn");
+const repayBtnElement = document.getElementById('repayLoanBtn');
 
 const bankBalanceElement = document.getElementById("bankBalance");
 const outstandingLoanElement = document.getElementById("outstandingLoanValue");
@@ -119,6 +120,10 @@ const handleComputerMenuChange = e => {
 
 
 getALoanBtnElement.addEventListener("click", getLoan);
+workBtnElement.addEventListener('click', increaseMoney);
+bankBtnElement.addEventListener('click', transferMoney);
+repayBtnElement.addEventListener('click', repayLoan);
+buyNowBtnElement.addEventListener('click', buyComputer);
 computersSelectElement.addEventListener("change", handleComputerMenuChange);
 
 
