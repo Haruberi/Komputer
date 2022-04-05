@@ -6,7 +6,7 @@ const buyNowBtnElement = document.getElementById('buyNowBtn');
 const repayBtnElement = document.getElementById('repayLoanBtn');
 
 //bank
-const bankBalanceElement = document.getElementById('bankBalance');
+const balanceElement = document.getElementById('bankBalance');
 const loanTitleElement = document.getElementById('loanTitle');
 const outstandingLoanElement = document.getElementById('outstandingLoanValue');
 
