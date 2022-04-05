@@ -11,7 +11,7 @@ Build a dynamic webpage using JavaScript.
 
 ## Background
 
-This project is created for the purpose of creating a Komputer store.
+This project is created for the purpose of creating a Komputer store on a webpage.
 
 ## Install
 
@@ -41,10 +41,9 @@ Open live server
 * [![standard-readme compliant](https://img.shields.io/badge/standard_readme-HERE-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 * [![standard-readme compliant](https://img.shields.io/badge/readme_badges-HERE-green.svg?style=flat-square)](https://github.com/Naereen/badges/blob/master/README.md)
+* [![icons](https://img.shields.io/badge/free_icons-HERE-purple.svg?style=flat-square)](https://simpleicons.org/)
 
 
 ## License
 
 MIT License © 2022 Anna Hallberg
-
-
