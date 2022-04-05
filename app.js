@@ -60,6 +60,7 @@ const increaseMoney = () => {
 }
 
 function setPay() {
+    return payBalanceElement.value += 100;
 }
 
 //transferMoney - BankButton
