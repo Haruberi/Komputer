@@ -13,6 +13,7 @@ Build a dynamic webpage using JavaScript.
 ## Background
 
 This project is created for the purpose of creating a Komputer store on a webpage.
+A part of Noroff Java Fullstack bootcamp assignment.
 
 ## Install
 
