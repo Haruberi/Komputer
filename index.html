@@ -18,45 +18,35 @@
     <div id = "bankBox">
         <!--BANK PAGE-->
         <h2>Bank</h2>
-        <b>Balance: </b> <b id = "bankBalance">0</b>
-        <br>
-        <b id = "loanTitle"></b><b id = "outstandingLoanValue"><b>
-        <br>
+        <b>Balance: </b> <b id = "bankBalance">0</b><br>
+        <b id = "loanTitle"></b><b id = "outstandingLoanValue"><b><br>
         <button class = "btn" id = "getALoanBtn">Get a Loan</button>
     </div>
-
     <div id = "workBox">
         <!--WORK PAGE-->
         <h2>Work</h2>
-        <b>Pay: </b><b id = "payBalance">0</b>
-        <br>
+        <b>Pay: </b><b id = "payBalance"></b><br>
         <button class = "btn" id = "bankBtn" onclick="transferMoney()">Bank</button>
         <button class = "btn" id = "workBtn" onclick="increasePayBalance()">Work</button>
         <button class = "btn" id = "repayLoanBtn" onclick="repayMoney()">Repay Loan</button>
     </div>
-
     <div id = "laptopBox">
-        <!--LAPTOP PAGE-->
-        <h2>Laptop</h2>
+        <!--LAPTOP SELECT PAGE-->
+        <h2>Laptops</h2>
         <select name = "computers" id = "computers"></select>
         <h3 id = "featuresTitle">Features: </h3>
         <p id = "computerSpecs"></p>
     </div>
+        <!--LAPTOP INFO PAGE-->
     <div id = "boxBelow">
-        <img id = "computerImage"
-        width="150" 
-        height = "150"> 
+        <img id = "computerImage" width="150" height = "150"> 
         <p id = "laptopName">Name here</p>
         <p id = "computerDescription"></p>
-        <b id = "computerPrice"></b> <b>SEK</b>
-        <br>
-        <br>
+        <b id = "computerPrice"></b> <b>SEK</b><br><br>
         <button class = "btn" id = "buyNowBtn">BUY NOW</button>
         <p id = "cannotAfford"></p>
     </div>
-
 </div>
-
     <script src = "app.js"></script>
 </body>
 </html>
