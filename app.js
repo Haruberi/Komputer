@@ -1,29 +1,29 @@
 //buttons
-const getALoanBtnElement = document.getElementById("getALoanBtn");
-const bankBtnElement = document.getElementById("bankBtn");
-const workBtnElement = document.getElementById("workBtn");
-const buyNowBtnElement = document.getElementById("buyNowBtn");
+const getALoanBtnElement = document.getElementById('getALoanBtn');
+const bankBtnElement = document.getElementById('bankBtn');
+const workBtnElement = document.getElementById('workBtn');
+const buyNowBtnElement = document.getElementById('buyNowBtn');
 const repayBtnElement = document.getElementById('repayLoanBtn');
 
 //bank
-const bankBalanceElement = document.getElementById("bankBalance");
-const loanTitleElement = document.getElementById("loanTitle");
-const outstandingLoanElement = document.getElementById("outstandingLoanValue");
+const bankBalanceElement = document.getElementById('bankBalance');
+const loanTitleElement = document.getElementById('loanTitle');
+const outstandingLoanElement = document.getElementById('outstandingLoanValue');
 
 //work
-const payBalanceElement = document.getElementById("payBalance");
+const payBalanceElement = document.getElementById('payBalance');
 
 //laptop selection
-const computersSelectElement = document.getElementById("computers");
-const featuresElement = document.getElementById("featuresTitle");
-const computerSpecsElement = document.getElementById("computerSpecs");
+const computersSelectElement = document.getElementById('computers');
+const featuresElement = document.getElementById('featuresTitle');
+const computerSpecsElement = document.getElementById('computerSpecs');
 
 //laptop information
-const computerImageElement = document.getElementById("computerImage");
-const laptopNameElement = document.getElementById("laptopName");
-const computerDescriptionElement = document.getElementById("computerDescription");
-const computerPriceElement = document.getElementById("computerPrice");
-const cannotAffordElement = document.getElementById("cannotAfford");
+const computerImageElement = document.getElementById('computerImage');
+const laptopNameElement = document.getElementById('laptopName');
+const computerDescriptionElement = document.getElementById('computerDescription');
+const computerPriceElement = document.getElementById('computerPrice');
+const cannotAffordElement = document.getElementById('cannotAfford');
 
 let outstandingLoanValue = 0;
 let increasePay = 100;
@@ -41,7 +41,7 @@ const loanTransfer = document.querySelector("#outstandingLoanValue");
 const selectedComputerPrice = document.querySelector("#computerPrice");
 const bankBalanceValue = document.querySelector("#bankBalance");
 
-//The function for button 'Get a Loan', to get a loan
+//getLoan
  const getLoan = () => {
     
     const prompt = Number(window.prompt('Enter an amount to loan: '));
