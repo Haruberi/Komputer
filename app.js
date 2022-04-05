@@ -39,19 +39,18 @@ const buyComputer = document.querySelector("#buyNowBtn");
 const displayPayBalance = document.querySelector("#payBalance");
 const loanTransfer = document.querySelector("#outstandingLoanValue");
 const selectedComputerPrice = document.querySelector("#computerPrice");
-const bankBalanceValue = document.querySelector("#bankBalance");
 
 //getLoan
  const getLoan = () => {
     
     const prompt = Number(window.prompt('Enter an amount to loan: '));
-    document.getElementById("repayLoanBtn").style.display = "block";
-        if ( prompt > bankBalanceValue.value * 2) {
+    document.getElementById('repayLoanBtn').style.display = 'block';
+        if ( prompt > balanceElement.value * 2) {
             alert('Your loan cannot be more than double you bank balance.\n Try again.');    
         }
         else {
             outstandingLoanValue = prompt;
-            loanTitleElement.innerText = `Total loan: ${outstandingLoanValue} SEK`;
+            loanTitleElement.innerText = 'Total loan: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(outstandingLoanValue);
         }
  }
 
@@ -62,7 +61,7 @@ increaseMoney.addEventListener("click", () => {
 })
 //The function for the button 'Bank'
 transferMoney.addEventListener("click", () => {
-    bankBalanceValue.innerText = `${payBalance} SEK`;
+    balanceElement.value = `${payBalance} SEK`;
     
     if(outstandingLoanValue > 0){
         payBalance = displayPayBalance.innerText =
@@ -87,7 +86,7 @@ buyComputer.addEventListener("click",() => {
     if(bankBalance >= computerPrice) {
         alert ("You are the owner of a laptop!");
 
-        bankBalanceValue.innerText = `${computerPrice - bankBalance} SEK`;
+        balanceElement.value = `${computerPrice - bankBalance} SEK`;
     } else {
         alert("You cannot afford the laptop");
     }
