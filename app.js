@@ -30,13 +30,19 @@ const cannotAffordElement = document.getElementById('cannotAfford');
 // let bankBalance = 0;
 let outstandingLoanValue = 0;
 let payBalance = 0;
-const increasingMoney = 100;
-// let enterAmount = 0;
-// let increasePay = 100;
-// let increasePay2 = 90;
+let increaseRate = 0;
+
+payBalanceElement.innerHTML= increaseRate;
+
+
 let computers = [];
 let money = [];
 let computerPrice = [];
+
+// let enterAmount = 0;
+// let increasePay = 100;
+// let increasePay2 = 90;
+
 
 //getLoan - GetALoanButton
 const getLoan = () => {
@@ -58,10 +64,13 @@ const getLoan = () => {
 
 //increaseMoney - WorkButton - prints out 100
 const increaseMoney = () => {
+    console.log("hej");
+    increaseRate += 100;
+    payBalanceElement.innerHTML = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(increaseRate);
 
-    const increasedMoney = increasingMoney;
-    
-    payBalanceElement.innerText = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(increasedMoney);
+    // payBalanceElement.innerHTML = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(increaseRate);
+
+    // payBalanceElement.innerText = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(increasingMoney);
     // const increasedMoney = parseInt(payBalanceElement.value);
     // payBalanceElement.innerText = 100 + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(increasedMoney);
 
