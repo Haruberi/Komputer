@@ -98,13 +98,20 @@ const increaseMoney = () => {
 //transferMoney - BankButton
 const transferMoney = () => {
 
-   parseInt(balanceElement.value) = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);
+    let someValue = parseInt(payBalanceElement.innerHTML);
+    console.log(someValue);
+
+// parseInt(balanceElement.value) = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);
     
     if(outstandingLoanValue > 0){
-        payBalance = payBalanceElement.innerText =
-    parseInt(payBalanceElement.innerText) + 90;
-    loanTitleElement.innerText = 'Total loan: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(outstandingLoanValue - payBalance);
-    payBalanceElement.innerText == new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance-payBalance);;
+        payBalance = parseInt(payBalanceElement.innerText);
+        console.log(payBalance);
+        let tenPercentPay = payBalance * 0.10;
+        loanTitleElement.innerHTML = 'Total loan: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(outstandingLoanValue - tenPercentPay);
+        payBalanceElement.innerHTML = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance-payBalance);
+        
+        // payBalanceElement.innerText == new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(0);
+        outstandingLoanValue = outstandingLoanValue - tenPercentPay;
     }
     else {
         //parseInt - know for a fact that bankBalance will be an integer
