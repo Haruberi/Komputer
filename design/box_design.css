@@ -28,15 +28,15 @@
 }
 
 #bankBox {
-    background-color: #d7f1e7;
+    background: linear-gradient(to top left, #d7f1e7, #92dfc1);
     border: 2px solid black;
 }
 #workBox {
-    background-color: #d7e7f1;
+    background: linear-gradient(to top left, #d7e7f1, #9abdd3);
     border: 2px solid black;
 }
 #laptopBox {
-    background-color: #e1d7f1;
+    background: linear-gradient(to top left,#f2f1f3, #bfaddf);
     border: 2px solid black;
 
 }
