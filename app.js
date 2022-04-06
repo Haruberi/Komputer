@@ -13,6 +13,7 @@ const loanTitleElement = document.getElementById('loanTitle');
 
 //work
 const payBalanceElement = document.getElementById('payBalance');
+const payBalanceTitleElement = document.getElementById('payBalanceTitle');
 
 //laptop selection
 const computersSelectElement = document.getElementById('computers');
@@ -26,9 +27,10 @@ const computerDescriptionElement = document.getElementById('computerDescription'
 const computerPriceElement = document.getElementById('computerPrice');
 const cannotAffordElement = document.getElementById('cannotAfford');
 
-let bankBalance = 0;
+// let bankBalance = 0;
 let outstandingLoanValue = 0;
 let payBalance = 0;
+const increasingMoney = 100;
 // let enterAmount = 0;
 // let increasePay = 100;
 // let increasePay2 = 90;
@@ -54,14 +56,35 @@ const getLoan = () => {
 
 }
 
-//increaseMoney - WorkButton
+//increaseMoney - WorkButton - prints out 100
 const increaseMoney = () => {
-    setPay();
+
+    const increasedMoney = increasingMoney;
+    
+    payBalanceElement.innerText = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(increasedMoney);
+    // const increasedMoney = parseInt(payBalanceElement.value);
+    // payBalanceElement.innerText = 100 + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(increasedMoney);
+
+    // const increasedMoney = parseInt(payBalanceElement.value) = 100;
+    // payBalanceTitleElement.innerText = 'Pay: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(increasedMoney);
+
+
+
 }
 
-function setPay() {
-    return parseInt(payBalanceElement.value += 100);
-}
+
+
+//increaseMoney
+// const increaseMoney = () => {
+//         
+//     }
+    
+    //  payBalanceElement.innerText = (parseInt(payBalance) + 100 + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance));
+
+
+    // payBalanceElement.innerText = 100 + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);
+    // payBalanceElement.innerText = 10 + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);
+    // payBalance = payBalanceElement.innerText = parseInt(payBalanceElement.innerText) + 100;
 
 //transferMoney - BankButton
 const transferMoney = () => {
@@ -75,8 +98,9 @@ const transferMoney = () => {
     payBalanceElement.innerText == new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance-payBalance);;
     }
     else {
-        bankBalance = payBalanceElement.innerText =
-        parseInt(payBalanceElement.innerText) = 'Balance: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);;
+        //parseInt - know for a fact that bankBalance will be an integer
+        const bankBalance = parseInt(payBalanceElement.value) = 'Balance: ' + new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);;
+
     }
 
 }
