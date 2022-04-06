@@ -39,12 +39,12 @@ let computerPrice = [];
 //getLoan - GetALoanButton
 const getLoan = () => {
 
-    if (outstandingLoanElement.value > 0) {
+    if (parseInt(outstandingLoanElement.value > 0)) {
         alert('You need to work in order to repay your current loan.');
     }
     const prompt = Number(window.prompt('Enter an amount to loan: '));
     document.getElementById('repayLoanBtn').style.display = 'block';
-        if ( prompt > balanceElement.value * 2) {
+        if ( prompt > parseInt(balanceElement.value * 2)) {
             alert('Your loan cannot be more than double you bank balance.\n Try again.');    
         }
         else {
@@ -60,13 +60,13 @@ const increaseMoney = () => {
 }
 
 function setPay() {
-    return payBalanceElement.value += 100;
+    return parseInt(payBalanceElement.value += 100);
 }
 
 //transferMoney - BankButton
 const transferMoney = () => {
 
-    balanceElement.value = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);
+   parseInt(balanceElement.value) = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);
     
     if(outstandingLoanValue > 0){
         payBalance = payBalanceElement.innerText =
@@ -88,10 +88,10 @@ const repayLoan = () => {
 
 //buyComputer - BuyNowButton - 
 const buyComputer = () => {
-    if (balanceElement.value >= computerPriceElement.value) {
+    if (parseInt(balanceElement.value) >= parseInt(computerPriceElement.value)) {
         alert('You are the owner of a laptop!');
 
-        balanceElement.value = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(computerPriceElement.value - bankBalance.value);
+        parseInt(balanceElement.value) = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(parseInt(computerPriceElement.value) - parseInt(bankBalance.value));
     } else {
         alert('You cannot afford the laptop.');
     }
