@@ -25,7 +25,7 @@ let computers = [];
 payBalanceElement.innerHTML = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(startValue);
 balanceElement.innerHTML = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(startValue);
 
-//getLoan - GetALoanButton
+//getLoan - function to get a loan from the bank
 const getLoan = () => {
 
     if (outstandingLoanValue > 0) {
@@ -47,7 +47,7 @@ const getLoan = () => {
 
 }
 
-//increaseMoney - WorkButton - work
+//increaseMoney - function to increase your Pay balance
 const increaseMoney = () => {
     console.log("work");
 
@@ -55,13 +55,13 @@ const increaseMoney = () => {
     payBalanceElement.innerHTML = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);
 }
 
-//transferMoney - BankButton
+//transferMoney - function to transfer the money from your Pat balance to your Bank balance
 const transferMoney = () => {
-    
     if(outstandingLoanValue > 0){
     
         let tenPercentPay = payBalance * 0.10;
-        if (tenPercentPay > outstandingLoanValue) {
+        if (tenPercentPay > outstandingLoanValue) 
+        {
             tenPercentPay = outstandingLoanValue;
         }
         outstandingLoanValue -= tenPercentPay;
@@ -72,14 +72,13 @@ const transferMoney = () => {
         payBalance = 0;
         payBalanceElement.innerHTML = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance);
 
-        if (outstandingLoanValue == 0) {
+        if (outstandingLoanValue == 0) 
+        {
             document.getElementById('repayLoanBtn').style.display = 'none';
         }
     }
     else {
         balanceElement.innerHTML = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(bankValue + payBalance);
-
-
         bankValue += payBalance;
         payBalanceElement.innerHTML = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(payBalance-payBalance);
         payBalance = 0;
@@ -88,7 +87,11 @@ const transferMoney = () => {
 
 }
 
-//repay loan
+/*  repay loan - function to repay your loan. 
+    The full value of your current Pay balance 
+    should go towards the outstanding loan and any 
+    remaining funds after paying the loan will be transferred to your bank account
+*/
 const repayLoan = () => {
     if (payBalance == 0) {
         alert('Your pay balance is 0,00 kr. You need to earn money to repay your loan.')
@@ -111,13 +114,12 @@ const repayLoan = () => {
     }
 }
 
-//buyComputer - BuyNowButton - 
+//buyComputer - function so you can buy a laptop
 const buyComputer = () => {
     if (bankValue >= selectedComputer.price) {
         alert('You are the owner of a laptop!');
         bankValue -= selectedComputer.price;
         balanceElement.innerHTML = new Intl.NumberFormat('sv-SE', {style: 'currency', currency: 'SEK'}).format(bankValue);
-
     } else {
         alert('You cannot afford the laptop.');
     }
@@ -128,6 +130,7 @@ fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
     .then(data => computers = data)
     .then(computers => addComputersToMenu(computers));
 
+//addComputersToMenu - function to add computers to the menu
 const addComputersToMenu = (computers) => {
     selectedComputer = computers[0];
     computers.forEach(x => addComputerToMenu(x));
@@ -139,6 +142,7 @@ const addComputersToMenu = (computers) => {
 
 }
 
+//addComputerToMenu - function to add a computer to the menu
 const addComputerToMenu = (computer) => {
     const computerElement = document.createElement("option");
     computerElement.value = computer.id;
@@ -146,6 +150,7 @@ const addComputerToMenu = (computer) => {
     computersSelectElement.appendChild(computerElement);
 }
 
+//handleComputerMenuChange - function to handle the change of computers in the menu
 const handleComputerMenuChange = e => {
     selectedComputer = computers[e.target.selectedIndex];
     console.log(selectedComputer.price);
