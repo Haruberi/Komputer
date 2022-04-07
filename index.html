@@ -5,11 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Komputer Store</title>
-    <!--DESIGN PAGE-->
     <link rel = "stylesheet" href = "/design/index.css"/>
-    <link rel="stylesheet" href="/design/box_design.css"/>
-    <link rel="stylesheet" href="/design/button.css"/>
-
+    <link rel = "stylesheet" href="/design/box_design.css"/>
+    <link rel = "stylesheet" href="/design/button.css"/>
 </head>
 
 <body>
@@ -17,30 +15,30 @@
 <div class = "container">
     <div id = "bankBox">
         <!--BANK PAGE-->
-        <h2>Bank</h2>
-        <b id="balanceTitle">Balance: </b> <b id = "bankBalance"></b><br>
-        <b id = "loanTitle"></b><b id = "outstandingLoanValue"><b><br>
+        <h2 class="boxTitle">Bank</h2>
+        <b class="contentTitle">Balance: </b> <b id = "bankBalance"></b><br>
+        <b id = "loanTitle"></b><b id = "outstandingLoanValue"></b><br>
         <button class = "btn" id = "getALoanBtn">Get a Loan</button>
     </div>
     <div id = "workBox">
         <!--WORK PAGE-->
-        <h2>Work</h2>
-        <b id="payBalanceTitle">Pay: </b><div id = "payBalance"></div><br>
+        <h2 class="boxTitle">Work</h2>
+        <b class="contentTitle">Pay: </b><b id = "payBalance"></b> <br>
         <button class = "btn" id = "bankBtn">Bank</button>
         <button class = "btn" id = "workBtn">Work</button>
         <button class = "btn" id = "repayLoanBtn">Repay Loan</button>
     </div>
     <div id = "laptopBox">
         <!--LAPTOP SELECT PAGE-->
-        <h2>Laptops</h2>
+        <h2 class="boxTitle">Laptops</h2>
         <select name = "computers" id = "computers"></select>
-        <h3 id = "featuresTitle">Features: </h3>
-        <p id = "computerSpecs"></p>
+        <h3 class = "contentTitle">Features: </h3>
+        <p class="content" id = "computerSpecs"></p>
     </div>
         <!--LAPTOP INFO PAGE-->
     <div id = "boxBelow">
         <img id = "computerImage" width="150" height = "150"> 
-        <p id = "laptopName">Name here</p>
+        <p id = "computerName" >Name here</p>
         <p id = "computerDescription"></p>
         <b id = "computerPrice"></b><b></b><br><br>
         <button class = "btn" id = "buyNowBtn">BUY NOW</button>
