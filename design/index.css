@@ -1,9 +1,25 @@
 #laptopName {
     font-size: 30px;
     text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #computerSpecs {
     text-align: center;
 }
+
+#boxTitle {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#contentTitle {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#loanTitle {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#content {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
