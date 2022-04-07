@@ -2,6 +2,8 @@
 
 Build a dynamic webpage using JavaScript.
 
+![build](https://img.shields.io/badge/build-passing-green)
+
 - [Background](#background)
 - [Install](#install)
 - [Usage](#usage)
