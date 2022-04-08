@@ -25,12 +25,12 @@ git clone https://github.com/Haruberi/Komputer.git
 
 ## Usage
 
-[![js](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/ht)
-[![css](https://img.shields.io/badge/--1572B6?logo=css3&logoColor=000)](https://en.wikipedia.org/wiki/CSS)
-[![html](https://img.shields.io/badge/--E34F26?logo=html5&logoColor=000)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![vscode](https://img.shields.io/badge/--007ACC?logo=visualstudiocode&logoColor=000)](https://code.visualstudio.com/)
-[![bootstrap](https://img.shields.io/badge/--7952B3?logo=bootstrap&logoColor=000)](https://getbootstrap.com/)
-[![windows](https://img.shields.io/badge/--0078D6?logo=windows&logoColor=000)](https://www.microsoft.com/sv-se/windows)
+[![js](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/ht)
+[![css](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=000)](https://en.wikipedia.org/wiki/CSS)
+[![html](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=000)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![vscode](https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC?logo=visualstudiocode&logoColor=000)](https://code.visualstudio.com/)
+[![bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?logo=bootstrap&logoColor=000)](https://getbootstrap.com/)
+[![windows](https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=000)](https://www.microsoft.com/sv-se/windows)
 
 ```
 Open live server
